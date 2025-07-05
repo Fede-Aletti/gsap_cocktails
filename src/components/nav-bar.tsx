@@ -1,9 +1,9 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react'
 
-import { navLinks } from '../constants/index'
+import { navLinks } from '../constants'
 
-export const Navbar = () => {
+const Navbar = () => {
  useGSAP(() => {
 	const navTween = gsap.timeline({
 	 scrollTrigger: {
@@ -29,13 +29,14 @@ export const Navbar = () => {
 		</a>
 		
 		<ul>
-		 {navLinks.map((link) => (
+		 {navLinks.map((link: { id: string; title: string }) => (
 			<li key={link.id}>
 			 <a href={`#${link.id}`}>{link.title}</a>
 			</li>
 		 ))}
 		</ul>
-      </div>
-    </nav>
-  );
-};
+	 </div>
+	</nav>
+ )
+}
+export default Navbar

@@ -1,12 +1,15 @@
-import gsap from "gsap";
-
 import "./App.css";
+import { NavBar } from "./components/nav-bar";
+import { Hero } from "./components/hero";
 
 const App = () => {
   return (
-    <div className="flex-center h-screen">
-      <h1 className="text-3xl text-indigo-300">Hello GSAP</h1>
-    </div>
+    <main>
+      <NavBar />
+      <Hero />
+
+      <div className="h-dvh bg-black"></div>
+    </main>
   );
 };
 

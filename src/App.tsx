@@ -1,14 +1,18 @@
-import "./App.css";
-import { NavBar } from "./components/nav-bar";
+import { Navbar } from "./components/nav-bar";
 import { Hero } from "./components/hero";
+import { Cocktails } from "./components/cocktails";
+import gsap from 'gsap';
+import { ScrollTrigger, SplitText } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const App = () => {
   return (
     <main>
-      <NavBar />
+      <Navbar />
       <Hero />
+      <Cocktails />
 
-      <div className="h-dvh bg-black"></div>
     </main>
   );
 };
